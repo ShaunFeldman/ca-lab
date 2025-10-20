@@ -1,4 +1,4 @@
-# Clean Architecture Team Lab Activity: Login and Logout
+\# Clean Architecture Team Lab Activity: Login and Logout
 
 In this team lab activity, your team will:
 - explore an existing use case (login)
