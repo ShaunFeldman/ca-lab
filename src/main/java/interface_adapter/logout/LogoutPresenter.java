@@ -13,9 +13,9 @@ import use_case.logout.LogoutOutputData;
  */
 public class LogoutPresenter implements LogoutOutputBoundary {
 
-    private LoggedInViewModel loggedInViewModel;
-    private ViewManagerModel viewManagerModel;
-    private LoginViewModel loginViewModel;
+    private final LoggedInViewModel loggedInViewModel;
+    private final ViewManagerModel viewManagerModel;
+    private final LoginViewModel loginViewModel;
 
     public LogoutPresenter(ViewManagerModel viewManagerModel,
                           LoggedInViewModel loggedInViewModel,
@@ -39,8 +39,6 @@ public class LogoutPresenter implements LogoutOutputBoundary {
         LoggedInState loggedInState = this.loggedInViewModel.getState();
         loggedInState.setUsername("");
         loggedInViewModel.firePropertyChange();
-
-
 
         // 1. get the LoginState out of the appropriate View Model,
         // 2. set the username in the state to be the username of the user that just logged out,
